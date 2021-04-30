@@ -113,6 +113,24 @@ nav {
   transition: 0.3s ease;
 }
 
+#login-menu {
+  background-color: var(--white);
+  border: none;
+  padding: 0.25rem 1rem;
+  border-radius: 2.5rem;
+  color: var(--grey-dark) !important;
+}
+#login-menu:hover {
+  background-color: var(--grey-dark) !important;
+  color: var(--white) !important;
+  transition: all 0.3s !important;
+  opacity: 1;
+}
+#login-menu i {
+  margin-right: 4px;
+  font-size: 1rem;
+}
+
 .hero-btn {
   color: var(--grey-dark);
   display: flex;

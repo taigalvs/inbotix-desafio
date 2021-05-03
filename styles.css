@@ -533,6 +533,12 @@ footer .form-control {
   margin-right: 5px;
 }
 
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
 @media (max-width: 567em) {
   .footer {
     height: 650px;
@@ -618,6 +624,10 @@ footer .form-control {
     margin-top: 1rem;
   }
   .form-bg {
+    background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
+    background: linear-gradient(to right, #2f80ed, #56ccf2);
+  }
+  .copy {
     background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
     background: linear-gradient(to right, #2f80ed, #56ccf2);
   }

@@ -10,7 +10,6 @@ function show() {
   mainMenu.style.display = "flex";
   closeMenu.style.display = "flex";
   menuOverlay.style.display = "flex";
-  console.log("mostrando puta");
 }
 
 function hide() {

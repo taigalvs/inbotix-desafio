@@ -56,6 +56,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 999;
 }
 
 header img {
@@ -78,6 +80,7 @@ nav {
   right: 0;
   padding-right: 20px;
 }
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -155,6 +158,9 @@ nav {
   opacity: 0.9;
   background-color: var(--grey-dark);
   color: var(--white);
+}
+.header-intro-buttons .btn .fa {
+  margin-right: 5px;
 }
 
 .header-intro-dashboard-img {
@@ -242,6 +248,20 @@ iframe {
   transform: translateX(-50%) translateY(-50%);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
   width: 90%;
+}
+
+.pulse-button {
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 0 var(--light-blue);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
 }
 
 .card-features {
@@ -333,6 +353,21 @@ section.pricing {
 .pricing .card-price {
   font-size: 3rem;
   margin: 0;
+}
+.price-lable {
+  position: absolute;
+  top: -15px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  display: inline-block;
+  width: 200px;
+  font-size: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff !important;
+  background-color: var(--light-blue) !important;
+  border-radius: 30px;
 }
 
 .pricing .card-price .period {
@@ -539,6 +574,30 @@ footer .form-control {
   align-items: flex-end;
 }
 
+.copy a:hover {
+  color: #fff;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff !important;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  animation: pulse 2s infinite;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
 @media (max-width: 567em) {
   .footer {
     height: 650px;
@@ -577,9 +636,14 @@ footer .form-control {
   .header-intro-container h1 {
     font-size: 2rem;
     font-weight: 600;
+    margin-top: 130px;
   }
   .header-intro-container p {
     font-size: 1.25rem;
+  }
+
+  .header-intro {
+    height: 100vh;
   }
 
   .card-features::before {
@@ -620,7 +684,7 @@ footer .form-control {
     padding: 0;
   }
   .header-intro-buttons .btn {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-top: 1rem;
   }
   .form-bg {
@@ -630,6 +694,10 @@ footer .form-control {
   .copy {
     background: -webkit-linear-gradient(to right, #2f80ed, #56ccf2);
     background: linear-gradient(to right, #2f80ed, #56ccf2);
+    display: inline-block;
+  }
+  .float {
+    right: 20px;
   }
 }
 
@@ -637,6 +705,7 @@ footer .form-control {
   .header-intro-container h1 {
     font-size: 4rem;
     font-weight: 600;
+    margin-top: 110px;
   }
   .header-intro-container p {
     font-size: 1.5rem;
@@ -765,6 +834,9 @@ footer .form-control {
   .closeMenu {
     font-size: 1.5rem;
   }
+  .float {
+    right: 60px;
+  }
 }
 
 @media only screen and (min-width: 1224px) {
@@ -847,7 +919,7 @@ footer .form-control {
     font-size: 1.3rem;
   }
   .header-intro-buttons .btn {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     margin-top: 1rem;
   }
 
@@ -882,6 +954,9 @@ footer .form-control {
     bottom: -60px;
     font-weight: 600;
   }
+  .float {
+    right: 80px;
+  }
 }
 
 @media only screen and (min-width: 1824px) {
@@ -891,5 +966,12 @@ footer .form-control {
 
   .header-intro {
     padding-bottom: 300px;
+  }
+
+  .header-intro-buttons .btn {
+    font-size: 1.35rem;
+  }
+  .float {
+    right: 40px;
   }
 }
